@@ -9,7 +9,7 @@ include 'functions.php';
 
 <div class="content">
 	<h2>Home</h2>
-	<p>Maayong bunkag mga real niggas</p>
+	<p>Welcome to the Homepage!</p>
 </div>
 
 <?=template_footer()?>

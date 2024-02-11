@@ -1,5 +1,11 @@
-To add:
+To Do:
 
-Search Function
+~~Search Function~~
 
-~~List sa contacts mag una ang phone then name~~
+~~List of contacts make Phone number go before name~~
+
+Improve UI
+
+Recommendation:
+
+Fix Orientation of Search field and search button, maybe place it next to create contact button

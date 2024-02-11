@@ -6,6 +6,6 @@ To Do:
 
 Improve UI
 
-Recommendation:
+Suggestions:
 
 Fix Orientation of Search field and search button, maybe place it next to create contact button

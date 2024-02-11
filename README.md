@@ -1,6 +1,6 @@
 To Do:
 
-~~Search Function~~
+~~Search Function~~ 39-43 sa read.php
 
 ~~List of contacts make Phone number go before name~~
 

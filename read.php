@@ -8,15 +8,26 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 $records_per_page = 5;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
-$stmt = $pdo->prepare('SELECT * FROM contacts ORDER BY id LIMIT :current_page, :record_per_page');
+// Get the search term via GET request (URL param: search)
+$search = isset($_GET['search']) && !empty($_GET['search']) ? $_GET['search'] : '';
+
+// Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
+if ($search) {
+    $stmt = $pdo->prepare('SELECT * FROM contacts WHERE id LIKE :search OR phone LIKE :search OR name LIKE :search OR email LIKE :search OR title LIKE :search OR created LIKE :search ORDER BY id LIMIT :current_page, :record_per_page');
+    $stmt->bindValue(':search', '%' . $search . '%');
+} else {
+    $stmt = $pdo->prepare('SELECT * FROM contacts ORDER BY id LIMIT :current_page, :record_per_page');
+}
+
 $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
+
 // Fetch the records so we can display them in our template.
 $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Get the total number of contacts, this is so we can determine whether there should be a next and previous button
-$num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
+$num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE id LIKE "%' . $search . '%" OR phone LIKE "%' . $search . '%" OR name LIKE "%' . $search . '%" OR email LIKE "%' . $search . '%" OR title LIKE "%' . $search . '%" OR created LIKE "%' . $search . '%"' : ''))->fetchColumn();
 ?>
 
 <?=template_header('Read')?>
@@ -24,6 +35,13 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
 <div class="content read">
 	<h2>Read Contacts</h2>
 	<a href="create.php" class="create-contact">Create Contact</a>
+
+    <!-- // search form  -->
+    <form action="read.php" method="get">
+    <input type="text" name="search" placeholder="Search..." value="<?=isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
+    <input type="submit" value="Search">
+</form>
+
 	<table>
         <thead>
             <tr>

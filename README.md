@@ -2,7 +2,7 @@ To Do:
 
 ~~Search Function~~
 
-~~List sa contacts mag una ang phone then name~~
+~~List of contacts make Phone number go before name~~
 
 
 Recommendation:

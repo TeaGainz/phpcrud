@@ -28,9 +28,9 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
         <thead>
             <tr>
                 <td>#</td>
+                <td>Phone</td>
                 <td>Name</td>
                 <td>Email</td>
-                <td>Phone</td>
                 <td>Title</td>
                 <td>Created</td>
                 <td></td>
@@ -40,9 +40,9 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
             <?php foreach ($contacts as $contact): ?>
             <tr>
                 <td><?=$contact['id']?></td>
+                <td><?=$contact['phone']?></td>
                 <td><?=$contact['name']?></td>
                 <td><?=$contact['email']?></td>
-                <td><?=$contact['phone']?></td>
                 <td><?=$contact['title']?></td>
                 <td><?=$contact['created']?></td>
                 <td class="actions">

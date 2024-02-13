@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     if (!$contact) {
         exit('Contact doesn\'t exist with that ID!');
     }
-    // Make sure the user confirms beore deletion
+    // Make sure the user confirms before deletion
     if (isset($_GET['confirm'])) {
         if ($_GET['confirm'] == 'yes') {
             // User clicked the "Yes" button, delete record

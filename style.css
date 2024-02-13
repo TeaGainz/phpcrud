@@ -83,12 +83,13 @@ body {
     margin: 15px 0 15px 5px;
 }
 .read .pagination a:hover {
-    background-color: #999b9d;
+    background-color: #999d99;
 }
 .read table {
     width: 100%;
     padding-top: 30px;
     border-collapse: collapse;
+    margin-top:2%;
 }
 .read table thead {
     background-color: #ebeef1;

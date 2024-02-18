@@ -19,7 +19,7 @@ if ($search) {
     $stmt = $pdo->prepare('SELECT * FROM contacts ORDER BY id LIMIT :current_page, :record_per_page');
 }
 
-$stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
+$stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
 
@@ -30,19 +30,24 @@ $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE id LIKE "%' . $search . '%" OR phone LIKE "%' . $search . '%" OR name LIKE "%' . $search . '%" OR email LIKE "%' . $search . '%" OR title LIKE "%' . $search . '%" OR created LIKE "%' . $search . '%"' : ''))->fetchColumn();
 ?>
 
-<?=template_header('Read')?>
+<?= template_header('Read') ?>
 
 <div class="content read">
-	<h2>Read Contacts</h2>
-	<a href="create.php" class="create-contact">Create Contact</a>
+    <h2>Read Contacts</h2>
 
-    <!-- // search form  -->
+    <a href="create.php" class="create-contact">Create Contact</a>
+
+                <!-- // search form  -->
+                <div class= "search-form">
     <form action="read.php" method="get">
-    <input type="text" name="search" placeholder="Search..." value="<?=isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
-    <input type="submit" value="Search">
-</form>
+        <input type="text" name="search" placeholder="Search..." value="<?= isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : '' ?>">
+        <input type="submit" value="Search">
+    </form>
+    </div>
 
-	<table>
+
+
+    <table>
         <thead>
             <tr>
                 <td>#</td>
@@ -55,30 +60,30 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($contacts as $contact): ?>
-            <tr>
-                <td><?=$contact['id']?></td>
-                <td><?=$contact['phone']?></td>
-                <td><?=$contact['name']?></td>
-                <td><?=$contact['email']?></td>
-                <td><?=$contact['title']?></td>
-                <td><?=$contact['created']?></td>
-                <td class="actions">
-                    <a href="update.php?id=<?=$contact['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="delete.php?id=<?=$contact['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
-                </td>
-            </tr>
+            <?php foreach ($contacts as $contact) : ?>
+                <tr>
+                    <td><?= $contact['id'] ?></td>
+                    <td><?= $contact['phone'] ?></td>
+                    <td><?= $contact['name'] ?></td>
+                    <td><?= $contact['email'] ?></td>
+                    <td><?= $contact['title'] ?></td>
+                    <td><?= $contact['created'] ?></td>
+                    <td class="actions">
+                        <a href="update.php?id=<?= $contact['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                        <a href="delete.php?id=<?= $contact['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-	<div class="pagination">
-		<?php if ($page > 1): ?>
-		<a href="read.php?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
-		<?php endif; ?>
-		<?php if ($page*$records_per_page < $num_contacts): ?>
-		<a href="read.php?page=<?=$page+1?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
-		<?php endif; ?>
-	</div>
+    <div class="pagination">
+        <?php if ($page > 1) : ?>
+            <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
+        <?php endif; ?>
+        <?php if ($page * $records_per_page < $num_contacts) : ?>
+            <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
+        <?php endif; ?>
+    </div>
 </div>
 
-<?=template_footer()?>
+<?= template_footer() ?>

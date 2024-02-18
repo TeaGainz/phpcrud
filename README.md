@@ -10,6 +10,6 @@ add dark mode and light mode switch
 
 Suggestions:
 
-Fix Orientation of Search field and search button, maybe place it next to create contact button
+~~Fix Orientation of Search field and search button, maybe place it next to create contact button~~
 
 Favorites Feature

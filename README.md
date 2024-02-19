@@ -4,7 +4,7 @@ To Do:
 
 ~~List of contacts make Phone number go before name~~
 
-Waiting for reyes to change the information on the home page
+*Waiting for reyes to change the information on the home page*
 
 Improve UI
 

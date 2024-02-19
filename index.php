@@ -9,13 +9,11 @@ include 'functions.php';
 	<div class="card-container">
 		<div class="card"><a href="hottub">
 				<div class="card--display"><i class="material-icons">hot_tub</i>
-					<h2>Hot Tub Time Machine</h2>
+					<h2>Create Contacts</h2>
 				</div>
 				<div class="card--hover">
-					<h2>Hot Tub Time Machine</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie
-						pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit
-						bibendum.</p>
+					<h2>Create Contacts</h2>
+					<p>Effortlessly build your contact database by adding new contacts with just a few clicks. Our user-friendly interface allows you to input essential details such as names, phone numbers, email addresses, and more. Stay organized and ensure that your contact list is always up-to-date.</p>
 					<p class="link">Click to see project</p>
 				</div>
 			</a>
@@ -25,13 +23,11 @@ include 'functions.php';
 	<div class="card-container">
 		<div class="card"><a href="worldweb">
 				<div class="card--display"><i class="material-icons">public</i>
-					<h2>World Wide Web</h2>
+					<h2>Delete Contacts</h2>
 				</div>
 				<div class="card--hover">
-					<h2>World Wide Web</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie
-						pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit
-						bibendum.</p>
+					<h2>Delete Contacts</h2>
+					<p>Need to remove outdated or irrelevant contacts? Our system provides a simple and secure way to delete contacts. Whether you're cleaning up your list or managing changes in your network, our delete functionality ensures that your contact database remains accurate and clutter-free.</p>
 					<p class="link">Click to see project</p>
 				</div>
 			</a>
@@ -41,13 +37,11 @@ include 'functions.php';
 	<div class="card-container">
 		<div class="card"><a href="trainthings">
 				<div class="card--display"><i class="material-icons">train</i>
-					<h2>Why I Hate Trains</h2>
+					<h2>Configure Contacts</h2>
 				</div>
 				<div class="card--hover">
-					<h2>Why I Hate Trains</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie
-						pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit
-						bibendum.</p>
+					<h1>Configure Contacts</h1>
+					<p>Tailor your contact details to meet your specific needs. Our configuration options enable you to update and modify contact information whenever necessary. Stay in control of your data by customizing fields, adding notes, or adjusting preferences to ensure your contact records are as accurate as possible.</p>
 					<p class="link">Click to see project</p>
 				</div>
 			</a>
@@ -56,14 +50,12 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card card--dark"><a href="androidupdate">
-				<div class="card--display"><i class="material-icons">android</i>
-					<h2>Another Android Update</h2>
+				<div class="card--display"><i class="material-icons">Search</i>
+					<h2>sample = Search for Contacts</h2>
 				</div>
 				<div class="card--hover">
-					<h2>Another Android Update</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie
-						pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit
-						bibendum.</p>
+					<h2>Search for Contacts</h2>
+					<p>Easily find the contacts you need with our powerful search functionality. Whether you're looking for a specific name, number, or other details, our search feature ensures quick and efficient access to your contact information.</p>
 					<p class="link">Click to see project</p>
 				</div>
 			</a>
@@ -72,14 +64,16 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card card--dark"><a href="phonesoff">
-				<div class="card--display"><i class="material-icons">ring_volume</i>
-					<h2>Why Phones Are So Loud</h2>
+				<div class="card--display"><i class="material-icons">Why Choose Contact Management?</i>
+					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
-					<h2>Why Phones Are So Loud</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie
-						pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit
-						bibendum.</p>
+					<h1>Why Phones Are So Loud:</h1>
+					<ul>
+						<li>User-Friendly Interface: Navigate through our system with ease, whether you're a tech enthusiast or a casual user.</li><br>
+						<li>Secure Data Management: Rest easy knowing that your contact information is stored securely and can be accessed only by authorized users.</li><br>
+						<li>Time-Efficient Operations: Save time with our efficient CRUD operations, allowing you to focus on what matters most.</li>
+					</ul>
 					<p class="link">Click to see project</p>
 				</div>
 			</a>

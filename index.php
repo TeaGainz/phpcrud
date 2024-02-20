@@ -8,11 +8,11 @@ include 'functions.php';
 <section>
 	<div class="card-container">
 		<div class="card"><a href="hottub">
-				<div class="card--display"><i class="material-icons">hot_tub</i>
-					<h2>Create Contacts</h2>
+				<div class="card--display"><i class="material-icons">Create Contacts</i>
+					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
-					<h2>Create Contacts</h2>
+					<h2>See More</h2>
 					<p>Effortlessly build your contact database by adding new contacts with just a few clicks. Our user-friendly interface allows you to input essential details such as names, phone numbers, email addresses, and more. Stay organized and ensure that your contact list is always up-to-date.</p>
 					<p class="link">Click to see project</p>
 				</div>
@@ -22,8 +22,8 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card"><a href="worldweb">
-				<div class="card--display"><i class="material-icons">public</i>
-					<h2>Delete Contacts</h2>
+				<div class="card--display"><i class="material-icons">Delete Contacts</i>
+					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
 					<h2>Delete Contacts</h2>
@@ -36,8 +36,8 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card"><a href="trainthings">
-				<div class="card--display"><i class="material-icons">train</i>
-					<h2>Configure Contacts</h2>
+				<div class="card--display"><i class="material-icons">Configure Contacts</i>
+					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
 					<h1>Configure Contacts</h1>
@@ -50,8 +50,8 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card card--dark"><a href="androidupdate">
-				<div class="card--display"><i class="material-icons">Search</i>
-					<h2>sample = Search for Contacts</h2>
+				<div class="card--display"><i class="material-icons">Search for Contacts</i>
+					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
 					<h2>Search for Contacts</h2>

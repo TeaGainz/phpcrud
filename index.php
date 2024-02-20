@@ -12,7 +12,7 @@ include 'functions.php';
 					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
-					<h2>See More</h2>
+					<h2>Create Contacts</h2>
 					<p>Effortlessly build your contact database by adding new contacts with just a few clicks. Our user-friendly interface allows you to input essential details such as names, phone numbers, email addresses, and more. Stay organized and ensure that your contact list is always up-to-date.</p>
 					<p class="link">Click to see project</p>
 				</div>

@@ -4,11 +4,14 @@ To Do:
 
 ~~List of contacts make Phone number go before name~~
 
-*Waiting for reyes to change the information on the home page*
-
 Improve UI
 
 add dark mode and light mode switch
+
+-Humana Home page
+-ayoa header kai na cut to
+-ayoa ang email, dapat di pwede ma add ang contact pag invalid email
+-dapat mugana sa mobile
 
 Suggestions:
 

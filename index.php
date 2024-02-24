@@ -7,7 +7,8 @@ include 'functions.php';
 <?= template_header('Home') ?>
 <section>
 	<div class="card-container">
-		<div class="card"><a href="hottub">
+		<div class="card">
+			<a href="hottub">
 				<div class="card--display"><i class="material-icons">Create Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -21,7 +22,8 @@ include 'functions.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card"><a href="worldweb">
+		<div class="card">
+			<a href="worldweb">
 				<div class="card--display"><i class="material-icons">Delete Contacts</i>
 					<h2>See More</h2>
 				</div>

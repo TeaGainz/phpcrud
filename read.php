@@ -48,7 +48,18 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
 
 
     <table>
-        <caption>Statement Summary</caption>
+        <!-- Records per page dropdown -->
+        <div class="records-per-page">
+            <form action="read.php" method="get">
+                <label for="records-per-page">Records per page:</label>
+                <select name="records-per-page" id="records-per-page" onchange="this.form.submit()">
+                    <option value="5" <?= $records_per_page == 5 ? 'selected' : '' ?>>5</option>
+                    <option value="10" <?= $records_per_page == 10 ? 'selected' : '' ?>>10</option>
+                    <option value="20" <?= $records_per_page == 20 ? 'selected' : '' ?>>20</option>
+                    <option value="50" <?= $records_per_page == 50 ? 'selected' : '' ?>>50</option>
+                </select>
+            </form>
+        </div>
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -86,19 +97,6 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
             <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
         <?php endif; ?>
     </div>
-</div>
-
-<!-- Records per page dropdown -->
-<div class="records-per-page">
-    <form action="read.php" method="get">
-        <label for="records-per-page">Records per page:</label>
-        <select name="records-per-page" id="records-per-page" onchange="this.form.submit()">
-            <option value="5" <?= $records_per_page == 5 ? 'selected' : '' ?>>5</option>
-            <option value="10" <?= $records_per_page == 10 ? 'selected' : '' ?>>10</option>
-            <option value="20" <?= $records_per_page == 20 ? 'selected' : '' ?>>20</option>
-            <option value="50" <?= $records_per_page == 50 ? 'selected' : '' ?>>50</option>
-        </select>
-    </form>
 </div>
 
 <?= template_footer() ?>

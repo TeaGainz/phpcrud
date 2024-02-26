@@ -10,6 +10,7 @@ add dark mode and light mode switch
 
 -Humana Home page
 
+~~added dropdown for records per page~~
 
 ~~-ayoa ang email, dapat di pwede ma add ang contact pag invalid email~~
 

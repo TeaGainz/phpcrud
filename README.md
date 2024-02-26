@@ -9,10 +9,14 @@ Improve UI
 add dark mode and light mode switch
 
 -Humana Home page
--ayoa header kai na cut to
+
+
 -ayoa ang email, dapat di pwede ma add ang contact pag invalid email
+
 -dapat mugana sa mobile
+
 -ADD SETTINGS FEATURE
+
 Suggestions:
 
 ~~Fix Orientation of Search field and search button, maybe place it next to create contact button~~

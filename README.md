@@ -12,6 +12,8 @@ add dark mode and light mode switch
 
 i change ang Date to Current Date and Time sa "Create Contacts"
 
+i change ang color sa header
+
 ~~added dropdown for records per page~~
 
 ~~-ayoa ang email, dapat di pwede ma add ang contact pag invalid email~~

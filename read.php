@@ -60,7 +60,6 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
         </select>
     </form>
 </div>
-        <caption>Contact List</caption>
         <thead>
             <tr>
                 <th scope="col">#</th>

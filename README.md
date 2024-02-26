@@ -11,7 +11,7 @@ add dark mode and light mode switch
 -Humana Home page
 
 
--ayoa ang email, dapat di pwede ma add ang contact pag invalid email
+~~-ayoa ang email, dapat di pwede ma add ang contact pag invalid email~~
 
 -dapat mugana sa mobile
 

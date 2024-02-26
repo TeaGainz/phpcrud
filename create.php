@@ -2,29 +2,43 @@
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check if POST data is not empty
+
+// Check POST data is not empty
 if (!empty($_POST)) {
-    // Post data not empty insert a new record
-    // Set-up the variables that are going to be inserted, we must check if the POST variables exist if not we can default them to blank
+    //variables that are going to be inserted
     $id = isset($_POST['id']) && !empty($_POST['id']) && $_POST['id'] != 'auto' ? $_POST['id'] : NULL;
-    // Check if POST variable "name" exists, if not default the value to blank, basically the same for all variables
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
     $title = isset($_POST['title']) ? $_POST['title'] : '';
     $created = isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
-    // Insert new record into the contacts table
-    $stmt = $pdo->prepare('INSERT INTO contacts VALUES (?, ?, ?, ?, ?, ?)');
-    $stmt->execute([$id, $name, $email, $phone, $title, $created]);
-    // Output message
-    $msg = 'Created Successfully!';
+
+    // Validate email
+    function is_valid_email($email) {
+        // Regex pattern for valid email address
+        $pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
+        return preg_match($pattern, $email);
+    }
+
+    // Check if email, name, and phone are not empty
+    if (empty($email) || empty($name) || empty($phone)) {
+        $msg = 'Email, name, and phone are required fields.';
+    } elseif (!is_valid_email($email)) {
+        // Check if email valid
+        $msg = 'Invalid email address. Please provide a valid email.';
+    } else {
+        // Insert new record into the contacts table
+        $stmt = $pdo->prepare('INSERT INTO contacts VALUES (?, ?, ?, ?, ?, ?)');
+        $stmt->execute([$id, $name, $email, $phone, $title, $created]);
+        $msg = 'Created Successfully!';
+    }
 }
 ?>
 
 <?=template_header('Create')?>
 
 <div class="content update">
-	<h2>Create Contact</h2>
+    <h2>Create Contact</h2>
     <form action="create.php" method="post">
         <label for="id">ID</label>
         <label for="name">Name</label>

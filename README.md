@@ -10,6 +10,8 @@ add dark mode and light mode switch
 
 -Humana Home page
 
+i change ang Date to Current Date and Time sa "Create Contacts"
+
 ~~added dropdown for records per page~~
 
 ~~-ayoa ang email, dapat di pwede ma add ang contact pag invalid email~~

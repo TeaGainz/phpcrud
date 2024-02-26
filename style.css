@@ -4,31 +4,37 @@
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
-    
+
 }
+
 body {
     background-image: url("wallbg.jpg");
-    background-size: cover;
-    background-color: #ffffffb2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     margin: 0;
 }
+
 .navtop {
     background-color: #4a3996d3;
     height: 60px;
     width: 100%;
     border: 0;
 }
+
 .navtop div {
     display: flex;
     margin: 0 auto;
     width: 1000px;
     height: 100%;
 }
-.navtop div h1, .navtop div a {
+
+.navtop div h1,
+.navtop div a {
     display: inline-flex;
     align-items: center;
 }
+
 .navtop div h1 {
     flex: 1;
     font-size: 24px;
@@ -37,22 +43,27 @@ body {
     color: #ecf0f6;
     font-weight: normal;
 }
+
 .navtop div a {
     padding: 0 20px;
     text-decoration: none;
     color: #c5d2e5;
     font-weight: bold;
 }
+
 .navtop div a i {
     padding: 2px 8px 0 0;
 }
+
 .navtop div a:hover {
     color: #ecf0f6;
 }
+
 .content {
     width: 1000px;
     margin: 0 auto;
 }
+
 .content h2 {
     margin: 0;
     padding: 25px 0;
@@ -61,7 +72,7 @@ body {
     color: #ffffff;
 }
 
-.content p{
+.content p {
     color: #ffffff;
 }
 
@@ -75,9 +86,11 @@ body {
     padding: 10px 15px;
     margin: 15px 0;
 }
+
 .read .create-contact:hover {
     background-color: #32a367;
 }
+
 .read .pagination {
     display: flex;
     justify-content: flex-end;
@@ -93,86 +106,108 @@ body {
     padding: 5px 10px;
     margin: 15px 0 15px 5px;
 }
+
 .read .pagination a:hover {
     background-color: #999d99;
 }
+
 .read table {
     width: 100%;
     padding-top: 30px;
     border-collapse: collapse;
     margin-top: -1%;
 }
+
 .read table thead {
     background-color: #ebeef1ec;
     border-bottom: 1px solid #d3dae0;
 }
+
 .read table thead td {
     padding: 10px;
     font-weight: bold;
     color: #767779;
     font-size: 14px;
 }
+
 .read table tbody tr {
     border-bottom: 1px solid #d3dae0;
 }
+
 .read table tbody tr:nth-child(odd) {
     background-color: #fbfcfcc4;
 }
+
 .read table tbody tr:nth-child(even) {
-    
+
     background-color: #fbfcfcc4;
 }
+
 .read table tbody tr:hover {
     background-color: #376ab7;
 }
+
 .read table tbody tr:hover td {
     color: #FFFFFF;
 }
+
 .read table tbody tr:hover td:nth-child(1) {
-    
+
     color: #FFFFFF;
 }
+
 .read table tbody tr td {
     padding: 10px;
 }
+
 .read table tbody tr td:nth-child(1) {
     color: #a5a7a9;
 }
+
 .read table tbody tr td.actions {
     padding: 8px;
     text-align: right;
 }
-.read table tbody tr td.actions .edit, .read table tbody tr td.actions .trash {
-    
+
+.read table tbody tr td.actions .edit,
+.read table tbody tr td.actions .trash {
+
     display: inline-flex;
     text-align: right;
     text-decoration: none;
     color: #FFFFFF;
     padding: 10px 12px;
 }
+
 .read table tbody tr td.actions .trash {
     background-color: #b73737;
 }
+
 .read table tbody tr td.actions .trash:hover {
     background-color: #a33131;
 }
+
 .read table tbody tr td.actions .edit {
     background-color: #37afb7;
 }
+
 .read table tbody tr td.actions .edit:hover {
     background-color: #319ca3;
 }
+
 .update form {
     padding: 15px 0;
     display: flex;
     flex-flow: wrap;
 }
+
 .update form label {
     display: inline-flex;
     width: 400px;
     padding: 10px 0;
     margin-right: 25px;
 }
+
 .update form input {
     padding: 10px;
     width: 400px;
@@ -180,6 +215,7 @@ body {
     margin-bottom: 15px;
     border: 1px solid #cccccc;
 }
+
 .update form input[type="submit"] {
     display: block;
     background-color: #38b673;
@@ -189,14 +225,17 @@ body {
     color: #FFFFFF;
     cursor: pointer;
     width: 200px;
-  margin-top: 15px;
+    margin-top: 15px;
 }
+
 .update form input[type="submit"]:hover {
     background-color: #32a367;
 }
+
 .delete .yesno {
     display: flex;
 }
+
 .delete .yesno a {
     display: inline-block;
     text-decoration: none;
@@ -206,28 +245,33 @@ body {
     padding: 10px 15px;
     margin: 15px 10px 15px 0;
 }
+
 .delete .yesno a:hover {
     background-color: #32a367;
 }
 
-.search-form input{
+.search-form input {
     height: 35px;
     position: relative;
 }
 
 .search-form form {
     display: inline-block;
-    margin-left: 150px; /* Adjust the value as per your requirement */
-    position: relative; /* Add this line to set the position */
+    margin-left: 150px;
+    /* Adjust the value as per your requirement */
+    position: relative;
+    /* Add this line to set the position */
     bottom: 50px;
     margin-bottom: -300px;
     outline: #666666;
 }
-.records-per-page{
+
+.records-per-page {
     height: 35px;
     position: absolute;
 }
-.records-per-page form{
+
+.records-per-page form {
     position: absolute;
     top: -50px;
     right: 1000px;
@@ -242,21 +286,24 @@ section {
     display: flex;
     flex-flow: wrap;
     font-family: "Ubuntu", sans-serif;
-  }
-  section * {
+}
+
+section * {
     box-sizing: border-box;
-  }
-  
-  .card-container {
+}
+
+.card-container {
     flex: 300px;
     margin: 30px;
-  }
-  .card-container .card {
+}
+
+.card-container .card {
     font-weight: bold;
     position: relative;
     width: 100%;
-  }
-  .card-container .card a {
+}
+
+.card-container .card a {
     padding: 30px;
     width: 100%;
     height: 400px;
@@ -266,40 +313,50 @@ section {
     color: black;
     display: block;
     transition: 0.25s ease;
-  }
-  .card-container .card a:hover {
+}
+
+.card-container .card a:hover {
     transform: translate(-30px, -30px);
     border-color: #5bc0eb;
-  }
-  .card-container .card a:hover .card--display {
+}
+
+.card-container .card a:hover .card--display {
     display: none;
-  }
-  .card-container .card a:hover .card--hover {
+}
+
+.card-container .card a:hover .card--hover {
     display: block;
-  }
-  .card-container .card a .card--display i {
+}
+
+.card-container .card a .card--display i {
     font-size: 60px;
     margin-top: 200px;
-  }
-  .card-container .card a .card--display h2 {
+}
+
+.card-container .card a .card--display h2 {
     margin: 20px 0 0;
-  }
-  .card-container .card a .card--hover {
+}
+
+.card-container .card a .card--hover {
     display: none;
-  }
-  .card-container .card a .card--hover h2 {
+}
+
+.card-container .card a .card--hover h2 {
     margin: 20px 0;
-  }
-  .card-container .card a .card--hover p {
+}
+
+.card-container .card a .card--hover p {
     font-weight: normal;
     line-height: 1.5;
-  }
-  .card-container .card a .card--hover p.link {
+}
+
+.card-container .card a .card--hover p.link {
     margin: 20px 0 0;
     font-weight: bold;
     color: #5bc0eb;
-  }
-  .card-container .card .card--border {
+}
+
+.card-container .card .card--border {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -307,12 +364,14 @@ section {
     top: 0;
     border: 2px dashed black;
     z-index: -1;
-  }
-  .card-container .card.card--dark a {
+}
+
+.card-container .card.card--dark a {
     color: white;
     background-color: black;
     border-color: black;
-  }
-  .card-container .card.card--dark a .card--hover .link {
+}
+
+.card-container .card.card--dark a .card--hover .link {
     color: #fde74c;
-  }
+}

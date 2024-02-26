@@ -1,3 +1,7 @@
+/* https://www.schemecolor.com/the-purple-family.php */
+
+
+
 /* Reset CSS for all elements */
 * {
     box-sizing: border-box;
@@ -6,16 +10,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* Body styling */
-body {
-    background-image: url("wallbg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    margin: 0;
-}
-
 /* Top navigation styling */
 .navtop {
     background-color: #4a3996d3;

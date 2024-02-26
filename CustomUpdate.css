@@ -2,11 +2,12 @@
   padding: 20px;
 }
 .form-container {
-  background: #eceff1;
+  background: rgba(255,255,255, 0.4);
   text-align: center;
   width: 300px;
   height: auto;
-  margin: 10% auto;
+  margin: 5% auto;
+  border-radius: 30px ;
 }
 
 .customInput {

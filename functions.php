@@ -18,6 +18,7 @@ echo <<<EOT
 	<head>
 		<meta charset="utf-8">
 		<title>$title</title>
+		<link href="CustomUpdate.css" rel="stylesheet" type="text/css">
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link href="card.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">

@@ -1,0 +1,29 @@
+.my-form {
+  padding: 20px;
+}
+.form-container {
+  background: #eceff1;
+  text-align: center;
+  width: 300px;
+  height: auto;
+  margin: 10% auto;
+}
+
+.customInput {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.inputHoverinput[type="submit"] {
+  background: #263238;
+  color: white;
+  transition: 1s;
+}
+.inputHoverinput[type="submit"]:hover {
+  background: white;
+  border: 2px solid #263238;
+  color: #263238;
+}

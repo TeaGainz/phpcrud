@@ -16,6 +16,7 @@ if (isset($_GET['id'])) {
         $stmt = $pdo->prepare('UPDATE contacts SET id = ?, name = ?, email = ?, phone = ?, title = ?, created = ? WHERE id = ?');
         $stmt->execute([$id, $name, $email, $phone, $title, $created, $_GET['id']]);
         $msg = 'Updated Successfully!';
+        header('Location: read.php');
     }
     // Get the contact from the contacts table
     $stmt = $pdo->prepare('SELECT * FROM contacts WHERE id = ?');
@@ -29,28 +30,66 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?=template_header('Read')?>
+<?= template_header('Read') ?>
 
-<div class="content update">
-	<h2>Update Contact #<?=$contact['id']?></h2>
-    <form action="update.php?id=<?=$contact['id']?>" method="post">
+<!-- <div class="content update">
+    <h2>Update Contact #<?= $contact['id'] ?></h2>
+    <form action="update.php?id=<?= $contact['id'] ?>" method="post">
         <label for="id">ID</label>
         <label for="name">Name</label>
-        <input type="text" name="id" placeholder="1" value="<?=$contact['id']?>" id="id">
-        <input type="text" name="name" placeholder="John Doe" value="<?=$contact['name']?>" id="name">
+        <input type="text" name="id" placeholder="1" value="<?= $contact['id'] ?>" id="id">
+        <input type="text" name="name" placeholder="John Doe" value="<?= $contact['name'] ?>" id="name">
         <label for="email">Email</label>
         <label for="phone">Phone</label>
-        <input type="text" name="email" placeholder="johndoe@example.com" value="<?=$contact['email']?>" id="email">
-        <input type="text" name="phone" placeholder="2025550143" value="<?=$contact['phone']?>" id="phone">
+        <input type="text" name="email" placeholder="johndoe@example.com" value="<?= $contact['email'] ?>" id="email">
+        <input type="text" name="phone" placeholder="2025550143" value="<?= $contact['phone'] ?>" id="phone">
         <label for="title">Title</label>
         <label for="created">Created</label>
-        <input type="text" name="title" placeholder="Employee" value="<?=$contact['title']?>" id="title">
-        <input type="datetime-local" name="created" value="<?=date('Y-m-d\TH:i', strtotime($contact['created']))?>" id="created">
+        <input type="text" name="title" placeholder="Employee" value="<?= $contact['title'] ?>" id="title">
+        <input type="datetime-local" name="created" value="<?= date('Y-m-d\TH:i', strtotime($contact['created'])) ?>" id="created">
         <input type="submit" value="Update">
     </form>
-    <?php if ($msg): ?>
-    <p><?=$msg?></p>
+    <?php if ($msg) : ?>
+        <p><?= $msg ?></p>
+    <?php endif; ?>
+</div> -->
+
+<div class="form-container">
+    <form action="update.php?id=<?= $contact['id'] ?>" class="my-form" method="post">
+        <div class="form-branding">
+            <h1>Update Contact #<?= $contact['id'] ?></h1>
+        </div>
+        <div class="form-input-content">
+            <label for="id">ID</label>
+            <input class="customInput" readonly type="text" name="id" placeholder="1" value="<?= $contact['id'] ?>" id="id" required autofocus />
+        </div>
+        <div class="form-input-content">
+            <label for="name">Name</label>
+            <input class="customInput" type="text" name="name" placeholder="John Doe" value="<?= $contact['name'] ?>" id="name" required autofocus />
+        </div>
+        <div class="form-input-content">
+            <label for="email">Email</label>
+            <input class="customInput" type="text" name="email" placeholder="johndoe@example.com" value="<?= $contact['email'] ?>" id="email" required autofocus />
+        </div>
+        <div class="form-input-content">
+            <label for="phone">Phone</label>
+            <input class="customInput" type="text" name="phone" placeholder="2025550143" value="<?= $contact['phone'] ?>" id="phone" required />
+        </div>
+        <div class="form-input-content">
+            <label for="title">Title</label>
+            <input class="customInput" type="text" name="title" placeholder="Employee" value="<?= $contact['title'] ?>" id="title" required />
+        </div>
+        <div class="form-input-content">
+            <label for="created">Created</label>
+            <input class="customInput" readonly type="datetime-local" name="created" value="<?= date('Y-m-d\TH:i', strtotime($contact['created'])) ?>" id="created" required />
+        </div>
+        <div class="form-input-content">
+            <input class="inputHoverinput customInput" type="submit" value="Update" />
+        </div>
+    </form>
+    <?php if ($msg) : ?>
+        <p><?= $msg ?></p>
     <?php endif; ?>
 </div>
 
-<?=template_footer()?>
+<?= template_footer() ?>

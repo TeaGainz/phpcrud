@@ -223,6 +223,15 @@ body {
     margin-bottom: -300px;
     outline: #666666;
 }
+.records-per-page{
+    height: 35px;
+    position: absolute;
+}
+.records-per-page form{
+    position: absolute;
+    top: -50px;
+    right: 1000px;
+}
 
 /*
 home page

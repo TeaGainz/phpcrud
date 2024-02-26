@@ -5,7 +5,7 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 5;
+$records_per_page = isset($_GET['records-per-page']) && in_array($_GET['records-per-page'], [5, 10, 20, 50]) ? (int)$_GET['records-per-page'] : 5;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 // Get the search term via GET request (URL param: search)
@@ -37,12 +37,12 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
 
     <a href="create.php" class="create-contact">Create Contact</a>
 
-                <!-- // search form  -->
-                <div class= "search-form">
-    <form action="read.php" method="get">
-        <input type="text" name="search" placeholder="Search..." value="<?= isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : '' ?>">
-        <input type="submit" value="Search">
-    </form>
+    <!-- Search form -->
+    <div class="search-form">
+        <form action="read.php" method="get">
+            <input type="text" name="search" placeholder="Search..." value="<?= isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : '' ?>">
+            <input type="submit" value="Search">
+        </form>
     </div>
 
 
@@ -85,5 +85,18 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
         <?php endif; ?>
     </div>
 </div>
+
+    <!-- Records per page dropdown -->
+    <div class="records-per-page">
+        <form action="read.php" method="get">
+            <label for="records-per-page">Records per page:</label>
+            <select name="records-per-page" id="records-per-page" onchange="this.form.submit()">
+                <option value="5" <?= $records_per_page == 5 ? 'selected' : '' ?>>5</option>
+                <option value="10" <?= $records_per_page == 10 ? 'selected' : '' ?>>10</option>
+                <option value="20" <?= $records_per_page == 20 ? 'selected' : '' ?>>20</option>
+                <option value="50" <?= $records_per_page == 50 ? 'selected' : '' ?>>50</option>
+            </select>
+        </form>
+    </div>
 
 <?= template_footer() ?>

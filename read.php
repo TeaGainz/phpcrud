@@ -48,27 +48,28 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
 
 
     <table>
+        <caption>Statement Summary</caption>
         <thead>
             <tr>
-                <td>#</td>
-                <td>Phone</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Title</td>
-                <td>Created</td>
-                <td></td>
+                <th scope="col">#</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Title</th>
+                <th scope="col">Created</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($contacts as $contact) : ?>
                 <tr>
-                    <td><?= $contact['id'] ?></td>
-                    <td><?= $contact['phone'] ?></td>
-                    <td><?= $contact['name'] ?></td>
-                    <td><?= $contact['email'] ?></td>
-                    <td><?= $contact['title'] ?></td>
-                    <td><?= $contact['created'] ?></td>
-                    <td class="actions">
+                    <td data-label="#"><?= $contact['id'] ?></td>
+                    <td data-label="Phone"><?= $contact['phone'] ?></td>
+                    <td data-label="Name"><?= $contact['name'] ?></td>
+                    <td data-label="Email"><?= $contact['email'] ?></td>
+                    <td data-label="Title"><?= $contact['title'] ?></td>
+                    <td data-label="Created"><?= $contact['created'] ?></td>
+                    <td data-label="">
                         <a href="update.php?id=<?= $contact['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                         <a href="delete.php?id=<?= $contact['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
                     </td>
@@ -76,6 +77,7 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
             <?php endforeach; ?>
         </tbody>
     </table>
+
     <div class="pagination">
         <?php if ($page > 1) : ?>
             <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
@@ -86,17 +88,17 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
     </div>
 </div>
 
-    <!-- Records per page dropdown -->
-    <div class="records-per-page">
-        <form action="read.php" method="get">
-            <label for="records-per-page">Records per page:</label>
-            <select name="records-per-page" id="records-per-page" onchange="this.form.submit()">
-                <option value="5" <?= $records_per_page == 5 ? 'selected' : '' ?>>5</option>
-                <option value="10" <?= $records_per_page == 10 ? 'selected' : '' ?>>10</option>
-                <option value="20" <?= $records_per_page == 20 ? 'selected' : '' ?>>20</option>
-                <option value="50" <?= $records_per_page == 50 ? 'selected' : '' ?>>50</option>
-            </select>
-        </form>
-    </div>
+<!-- Records per page dropdown -->
+<div class="records-per-page">
+    <form action="read.php" method="get">
+        <label for="records-per-page">Records per page:</label>
+        <select name="records-per-page" id="records-per-page" onchange="this.form.submit()">
+            <option value="5" <?= $records_per_page == 5 ? 'selected' : '' ?>>5</option>
+            <option value="10" <?= $records_per_page == 10 ? 'selected' : '' ?>>10</option>
+            <option value="20" <?= $records_per_page == 20 ? 'selected' : '' ?>>20</option>
+            <option value="50" <?= $records_per_page == 50 ? 'selected' : '' ?>>50</option>
+        </select>
+    </form>
+</div>
 
 <?= template_footer() ?>

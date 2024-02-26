@@ -4,7 +4,6 @@
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
 
 body {
@@ -135,61 +134,61 @@ table {
     border-bottom: 1px solid #d3dae0;
 }
 
-.read table tbody tr:nth-child(odd) {
+.read table tbody tr:nth-child(odd),
+table tr:nth-child(odd) {
     background-color: #fbfcfcc4;
 }
 
-.read table tbody tr:nth-child(even) {
+.read table tbody tr:nth-child(even),
+table tr:nth-child(even) {
     background-color: #fbfcfcc4;
 }
 
-.read table tbody tr:hover {
+.read table tbody tr:hover,
+table tr:hover {
     background-color: #376ab7;
 }
 
-.read table tbody tr:hover td {
+.read table tbody tr:hover td,
+table tr:hover td {
     color: #FFFFFF;
 }
 
-.read table tbody tr:hover td:nth-child(1) {
-    color: #FFFFFF;
-}
-
-.read table tbody tr td {
-    padding: 10px;
-}
-
+table tbody tr td:nth-child(1),
 .read table tbody tr td:nth-child(1) {
     color: #a5a7a9;
 }
 
+table tbody tr td.actions,
 .read table tbody tr td.actions {
     padding: 8px;
-    text-align: right;
+    text-align: left;
+    /* Change to left alignment */
 }
 
-.read table tbody tr td.actions .edit,
-.read table tbody tr td.actions .trash {
+table tbody tr td.actions .edit,
+table tbody tr td.actions .trash {
     display: inline-flex;
-    text-align: right;
+    text-align: left;
+    /* Change to left alignment */
     text-decoration: none;
     color: #FFFFFF;
     padding: 10px 12px;
 }
 
-.read table tbody tr td.actions .trash {
+table tbody tr td.actions .trash {
     background-color: #b73737;
 }
 
-.read table tbody tr td.actions .trash:hover {
+table tbody tr td.actions .trash:hover {
     background-color: #a33131;
 }
 
-.read table tbody tr td.actions .edit {
+table tbody tr td.actions .edit {
     background-color: #37afb7;
 }
 
-.read table tbody tr td.actions .edit:hover {
+table tbody tr td.actions .edit:hover {
     background-color: #319ca3;
 }
 
@@ -228,7 +227,13 @@ table th {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        /* Disable horizontal scrolling */
+    }
+
     table {
+        width: 100%;
         border: 0;
     }
 
@@ -257,7 +262,8 @@ table th {
         border-bottom: 1px solid #ddd;
         display: block;
         font-size: .8em;
-        text-align: right;
+
+        text-align: left;
     }
 
     table td::before {
@@ -271,8 +277,15 @@ table th {
         border-bottom: 0;
     }
 
-    
+    .read .pagination {
+        display: flex;
+        justify-content: flex-start;
+        /* Align pagination to the bottom left */
+        margin-top: 15px;
+        /* Add some space at the top of pagination */
+    }
 }
+
 
 /* General styling */
 body {

@@ -76,11 +76,11 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contacts' . ($search ? ' WHERE
             <?php foreach ($contacts as $contact) : ?>
                 <tr>
                     <td data-label="#"><?= $contact['id'] ?></td>
-                    <td data-label="Phone"><?= $contact['phone'] ?></td>
-                    <td data-label="Name"><?= $contact['name'] ?></td>
-                    <td data-label="Email"><?= $contact['email'] ?></td>
-                    <td data-label="Title"><?= $contact['title'] ?></td>
-                    <td data-label="Created"><?= $contact['created'] ?></td>
+                    <td data-label="Phone: "><?= $contact['phone'] ?></td>
+                    <td data-label="Name: "><?= $contact['name'] ?></td>
+                    <td data-label="Email: "><?= $contact['email'] ?></td>
+                    <td data-label="Title: "><?= $contact['title'] ?></td>
+                    <td data-label="Created: "><?= $contact['created'] ?></td>
                     <td class="actions">
                         <a href="update.php?id=<?= $contact['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                         <a href="delete.php?id=<?= $contact['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>

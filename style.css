@@ -235,6 +235,10 @@ table th {
 /* Responsive styling for small screens */
 @media screen and (max-width: 600px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     table {
         width: 100%;
         border: 0;
@@ -265,7 +269,8 @@ table th {
         border-bottom: 1px solid #ddd;
         display: block;
         font-size: .8em;
-        text-align: right;
+        text-align: left;
+        word-spacing: .1em;
     }
 
     table td::before {

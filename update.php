@@ -12,11 +12,24 @@ if (isset($_GET['id'])) {
         $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
         $title = isset($_POST['title']) ? $_POST['title'] : '';
         $created = isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
+
+        //
+        function is_valid_email($email)
+        {
+            // Regex pattern for valid email address
+            $pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
+            return preg_match($pattern, $email);
+        }
+        //
+        if (!is_valid_email($email)){
+            $msg = 'Invalid email address. Please provide a valid email.';
+        }else{
         // Update the record
         $stmt = $pdo->prepare('UPDATE contacts SET id = ?, name = ?, email = ?, phone = ?, title = ?, created = ? WHERE id = ?');
         $stmt->execute([$id, $name, $email, $phone, $title, $created, $_GET['id']]);
         $msg = 'Updated Successfully!';
         header('Location: read.php');
+    }
     }
     // Get the contact from the contacts table
     $stmt = $pdo->prepare('SELECT * FROM contacts WHERE id = ?');

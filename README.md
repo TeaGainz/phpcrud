@@ -16,6 +16,8 @@ i change ang Date to Current Date and Time sa "Create Contacts"
 
 i change ang color sa header
 
+Header issue sa read page kai putol japon
+
 ~~added dropdown for records per page~~
 
 ~~-ayoa ang email, dapat di pwede ma add ang contact pag invalid email~~

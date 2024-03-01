@@ -370,6 +370,9 @@ body {
     margin-bottom: 2%;
 }
 
+.records-per-page label{
+    color: #FFFFFF;
+}
 .records-per-page form {
     position: absolute;
     top: -50px;

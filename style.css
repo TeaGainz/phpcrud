@@ -10,9 +10,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 /* Top navigation styling */
 .navtop {
-    background-color: #4a3996d3;
+    background-color: #431d53;
     height: 60px;
     width: 100%;
 
@@ -328,10 +329,50 @@ table th {
     margin-bottom: 2%;
 }
 
-.records-per-page label{
+.records-per-page label {
     color: #FFFFFF;
 }
+
 .records-per-page form {
     position: absolute;
     top: -50px;
 }
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-left:-10%;
+}
+
+.video-container {
+    position: relative;
+    width: 76%; /* Adjust the width as needed */
+}
+
+.hover-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.7; /* Adjust the opacity as needed */
+    transition: opacity 0.3s ease;
+}
+
+.hover-video:hover {
+    opacity: 1;
+}
+
+.hover-video:hover::after {
+    content: "\25BA"; /* Unicode character for the play button (▶) */
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+

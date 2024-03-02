@@ -1,6 +1,9 @@
 <?php
 include 'functions.php';
-// Your PHP code here.
+$create_contacts_video = 'video1.php';
+$delete_contacts_video = 'video1.php';
+$configure_contacts_video = 'video1.php';
+$search_contacts_video = 'video1.php';
 ?>
 
 
@@ -8,7 +11,7 @@ include 'functions.php';
 <section>
 	<div class="card-container">
 		<div class="card">
-			<a href="hottub">
+			<a href="<?php echo $create_contacts_video; ?>">
 				<div class="card--display"><i class="material-icons">Create Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -23,7 +26,7 @@ include 'functions.php';
 	</div>
 	<div class="card-container">
 		<div class="card">
-			<a href="worldweb">
+			<a href="<?php echo $delete_contacts_video; ?>">
 				<div class="card--display"><i class="material-icons">Delete Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -37,7 +40,7 @@ include 'functions.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card"><a href="trainthings">
+		<div class="card"><a href="<?php echo $configure_contacts_video; ?>">
 				<div class="card--display"><i class="material-icons">Configure Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -51,7 +54,7 @@ include 'functions.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card card--dark"><a href="androidupdate">
+		<div class="card card--dark"><a href="<?php echo $search_contacts_video; ?>">
 				<div class="card--display"><i class="material-icons">Search for Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -65,7 +68,7 @@ include 'functions.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card card--dark"><a href="phonesoff">
+		<div class="card card--dark"><a>
 				<div class="card--display"><i class="material-icons">Why Choose Contact Management?</i>
 					<h2>See More</h2>
 				</div>
@@ -76,7 +79,6 @@ include 'functions.php';
 						<li>Secure Data Management: Rest easy knowing that your contact information is stored securely and can be accessed only by authorized users.</li><br>
 						<li>Time-Efficient Operations: Save time with our efficient CRUD operations, allowing you to focus on what matters most.</li>
 					</ul>
-					<p class="link">Click to see project</p>
 				</div>
 			</a>
 			<div class="card--border"></div>

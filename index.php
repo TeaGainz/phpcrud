@@ -54,7 +54,7 @@ $search_contacts_video = 'video1.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card card--dark"><a href="<?php echo $search_contacts_video; ?>">
+		<div class="card"><a href="<?php echo $search_contacts_video; ?>">
 				<div class="card--display"><i class="material-icons">Search for Contacts</i>
 					<h2>See More</h2>
 				</div>
@@ -68,7 +68,7 @@ $search_contacts_video = 'video1.php';
 		</div>
 	</div>
 	<div class="card-container">
-		<div class="card card--dark"><a>
+		<div class="card"><a>
 				<div class="card--display"><i class="material-icons">Why Choose Contact Management?</i>
 					<h2>See More</h2>
 				</div>

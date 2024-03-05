@@ -73,7 +73,7 @@ $search_contacts_video = 'video1.php';
 					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
-					<h1>Why Phones Are So Loud:</h1>
+					<h2>Why Phones Are So Loud:</h2>
 					<ul>
 						<li>User-Friendly Interface: Navigate through our system with ease, whether you're a tech enthusiast or a casual user.</li><br>
 						<li>Secure Data Management: Rest easy knowing that your contact information is stored securely and can be accessed only by authorized users.</li><br>

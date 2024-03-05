@@ -1,7 +1,6 @@
 /* https://www.schemecolor.com/the-purple-family.php */
 
 
-
 /* Reset CSS for all elements */
 * {
     box-sizing: border-box;
@@ -16,9 +15,10 @@
     background-color: #431d53;
     height: 60px;
     width: 100%;
-
     border: 0;
 }
+
+
 
 .navtop div {
     display: flex;
@@ -31,6 +31,7 @@
 .navtop div a {
     display: inline-flex;
     align-items: center;
+
 }
 
 .navtop div h1 {
@@ -41,6 +42,7 @@
     color: #ecf0f6;
     font-weight: normal;
 }
+
 
 .navtop div a {
     padding: 0 20px;
@@ -66,9 +68,11 @@
 .content h2 {
     margin: 0;
     padding: 25px 0;
+    padding-left: 1.33%;
     font-size: 22px;
     border-bottom: 1px solid #ebebeb;
     color: #ffffff;
+    width:100%;
 }
 
 .content p {
@@ -77,6 +81,7 @@
 
 /* Read section styling */
 .read .create-contact {
+
     display: inline-block;
     text-decoration: none;
     background-color: #38b673;
@@ -85,6 +90,7 @@
     color: #FFFFFF;
     padding: 10px 15px;
     margin: 15px 0;
+    margin-left:0.57%;
     border-radius: 10px;
 }
 
@@ -343,12 +349,13 @@ table th {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    margin-left:-10%;
+    margin-left: -10%;
 }
 
 .video-container {
     position: relative;
-    width: 76%; /* Adjust the width as needed */
+    width: 76%;
+    /* Adjust the width as needed */
 }
 
 .hover-video {
@@ -356,7 +363,8 @@ table th {
     height: auto;
     display: block;
     margin: 0 auto;
-    opacity: 0.7; /* Adjust the opacity as needed */
+    opacity: 0.7;
+    /* Adjust the opacity as needed */
     transition: opacity 0.3s ease;
 }
 
@@ -365,7 +373,8 @@ table th {
 }
 
 .hover-video:hover::after {
-    content: "\25BA"; /* Unicode character for the play button (▶) */
+    content: "\25BA";
+    /* Unicode character for the play button (▶) */
     font-size: 4em;
     position: absolute;
     top: 50%;
@@ -375,4 +384,3 @@ table th {
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
-

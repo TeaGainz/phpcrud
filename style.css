@@ -347,9 +347,9 @@ table th {
 .video-section {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     height: 90vh;
-    margin-left: -10%;
+    margin-top: 5%;
 }
 
 .video-container {
@@ -359,6 +359,7 @@ table th {
 }
 
 .hover-video {
+    
     width: 100%;
     height: auto;
     display: block;

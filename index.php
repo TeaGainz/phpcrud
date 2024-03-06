@@ -77,12 +77,9 @@ $search_contacts_video = 'tutorial_video.php?video=search';
 					<h2>See More</h2>
 				</div>
 				<div class="card--hover">
-					
-					<ul>
-						<li>User-Friendly Interface: Navigate through our system with ease, whether you're a tech enthusiast or a casual user.</li><br>
-						<li>Secure Data Management: Rest easy knowing that your contact information is stored securely and can be accessed only by authorized users.</li><br>
-						<li>Time-Efficient Operations: Save time with our efficient CRUD operations, allowing you to focus on what matters most.</li>
-					</ul>
+						<p><b>User-Friendly Interface:</b> Navigate through our system with ease, whether you're a tech enthusiast or a casual user.</p><br>
+						<p><b>Secure Data Management:</b> Rest easy knowing that your contact information is stored securely and can be accessed only by authorized users.</p><br>
+						<p><b>Time-Efficient Operations:</b> Save time with our efficient CRUD operations, allowing you to focus on what matters most.</p>
 				</div>
 			</a>
 			<div class="card--border"></div>

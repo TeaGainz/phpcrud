@@ -84,7 +84,7 @@
 
     display: inline-block;
     text-decoration: none;
-    background-color: #38b673;
+    background-color: #a338b6;
     font-weight: bold;
     font-size: 14px;
     color: #FFFFFF;
@@ -95,7 +95,7 @@
 }
 
 .read .create-contact:hover {
-    background-color: #32a367;
+    background-color: #a338b6b2;
 }
 
 .read .pagination {

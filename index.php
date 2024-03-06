@@ -86,4 +86,3 @@ $search_contacts_video = 'tutorial_video.php?video=search';
 		</div>
 	</div>
 </section>
-<?= template_footer() ?>

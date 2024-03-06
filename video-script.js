@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     hoverVideo.addEventListener('mouseout', function () {
-        hoverVideo.pause();
+        hoverVideo.play();
     });
 });

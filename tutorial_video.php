@@ -25,10 +25,52 @@ switch ($video) {
 ?>
 
 <?= template_header('Home') ?>
+<style>
+    .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100%;
+    margin-top: 3%;
+}
 
+.video-container {
+    position: relative;
+    width: 100%;
+    /* Adjust the width as needed */
+}
+
+.hover-video {
+    
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.7;
+    /* Adjust the opacity as needed */
+    transition: opacity 0.3s ease;
+}
+
+.hover-video:hover {
+    opacity: 1;
+}
+
+.hover-video:hover::after {
+    content: "\25BA";
+    /* Unicode character for the play button (▶) */
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+</style>
 <section class="video-section">
     <div class="video-container">
-        <video id="hoverVideo" class="hover-video" autoplay loop muted oncontextmenu="return false;">
+        <video id="hoverVideo" class="hover-video" autoplay loop muted>
             <source src="<?php echo $selected_video; ?>" type="video/mp4">
         </video>
     </div>

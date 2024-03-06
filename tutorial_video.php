@@ -27,46 +27,69 @@ switch ($video) {
 <?= template_header('Home') ?>
 <style>
     .video-section {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    height: 100%;
-    margin-top: 3%;
-}
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        height: 100vh;
+        margin-top: 3%;
+    }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    /* Adjust the width as needed */
-}
+    .video-container {
+        position: relative;
+        width: 100%;
+        /* Adjust the width as needed */
+    }
 
-.hover-video {
-    
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    opacity: 0.7;
-    /* Adjust the opacity as needed */
-    transition: opacity 0.3s ease;
-}
+    .hover-video {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        opacity: 0.7;
+        /* Adjust the opacity as needed */
+        transition: opacity 0.3s ease;
+    }
 
-.hover-video:hover {
-    opacity: 1;
-}
+    .hover-video:hover {
+        opacity: 1;
+    }
 
-.hover-video:hover::after {
-    content: "\25BA";
-    /* Unicode character for the play button (▶) */
-    font-size: 4em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
+    .hover-video:hover::after {
+        content: "\25BA";
+        /* Unicode character for the play button (▶) */
+        font-size: 4em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Media query for screens with a maximum width of 600 pixels (adjust as needed) */
+    @media screen and (max-width: 600px) {
+        .video-section {
+            margin-top: 40%;
+        }
+
+        .hover-video:hover::after {
+            font-size: 2em;
+        }
+
+        .video-container {
+            height: 200vh; /* Adjust the height as needed */
+        }
+
+        .hover-video {
+            transform: scale(2);
+            transition: transform 0.3s ease;
+        }
+
+        .hover-video:hover {
+            transform: scale(2.2); /* Adjust the zoom level as needed */
+        }
+    }
 </style>
 <section class="video-section">
     <div class="video-container">
